@@ -16,6 +16,7 @@ button.addEventListener('click', function () {
     let squareText = document.createTextNode(counter);
     container.appendChild(square);
     square.className = 'squares';
+    
 
 
 
@@ -25,6 +26,11 @@ button.addEventListener('click', function () {
     square.addEventListener('mouseleave', function () {
         square.removeChild(squareText);
     })
+     let i = 0; i < colors.length; i++
+    square.addEventListener('click', function(){
+        square.appendChild(colors[i]);
+    })
+
 
     counter++
 
