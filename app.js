@@ -1,5 +1,6 @@
 let colors = ['red', 'blue', 'yellow', 'green', 'purple', 'orange', 'gold'];
 
+
 let button = document.createElement('button');
 let btnText = document.createTextNode('add square');
 button.appendChild(btnText);
@@ -11,11 +12,13 @@ let container = document.createElement('div');
 document.body.appendChild(container);
 container.className = 'd-flex flex-wrap';
 
+
 button.addEventListener('click', function () {
     let square = document.createElement('div');
     let squareText = document.createTextNode(counter);
     container.appendChild(square);
     square.className = 'squares';
+
     
 
 
@@ -26,10 +29,20 @@ button.addEventListener('click', function () {
     square.addEventListener('mouseleave', function () {
         square.removeChild(squareText);
     })
-     let i = 0; i < colors.length; i++
+
     square.addEventListener('click', function(){
-        square.appendChild(colors[i]);
-    })
+        square.style.backgroundColor = 'red';
+        square.style.backgroundColor = 'blue';
+        square.style.backgroundColor = 'yellow';
+        square.style.backgroundColor = 'green';
+        square.style.backgroundColor = 'purple';
+        square.style.backgroundColor = 'orange';
+        square.style.backgroundColor = 'gold';
+        
+        
+    } )
+     
+    
 
 
     counter++
