@@ -18,6 +18,7 @@ button.addEventListener('click', function () {
     let squareText = document.createTextNode(counter);
     container.appendChild(square);
     square.className = 'squares';
+    square.id = counter;
 
     
 
@@ -31,18 +32,37 @@ button.addEventListener('click', function () {
     })
 
     square.addEventListener('click', function(){
-        square.style.backgroundColor = 'red';
-        square.style.backgroundColor = 'blue';
-        square.style.backgroundColor = 'yellow';
-        square.style.backgroundColor = 'green';
-        square.style.backgroundColor = 'purple';
-        square.style.backgroundColor = 'orange';
-        square.style.backgroundColor = 'gold';
+        // this generates a random color for squares
+        let randomIndex = Math.floor(Math.random() * colors.length);
+        square.style.backgroundColor = colors[randomIndex];
+        
+
         
         
-    } )
+    });
      
-    
+    square.addEventListener('dblclick', function () {
+        //if the square dblclicked is even?
+        if (square.id % 2 === 0) {
+            //if there is no next sibling, alert us!
+            if (condition) {
+                alert('There is no square to delete!');
+            //delete the next sibling
+            } else {
+                container.removeChild(square.nextSibling);
+            }
+        //if the square dblclicked is not even aka odd
+        } else {
+
+            //if there is no previous sibling, alert us!
+            if (condition) {
+             
+            //delete the previous sibling
+            } else {
+                alert('There is no square to remove!');
+            }
+        }
+    });
 
 
     counter++
