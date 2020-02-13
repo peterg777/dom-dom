@@ -45,7 +45,7 @@ button.addEventListener('click', function () {
         //if the square dblclicked is even?
         if (square.id % 2 === 0) {
             //if there is no next sibling, alert us!
-            if (condition) {
+            if (square.nextSibling === null) {
                 alert('There is no square to delete!');
             //delete the next sibling
             } else {
@@ -55,7 +55,7 @@ button.addEventListener('click', function () {
         } else {
 
             //if there is no previous sibling, alert us!
-            if (condition) {
+            if (square.previousSibling === null) {
              
             //delete the previous sibling
             } else {
