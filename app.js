@@ -53,6 +53,7 @@ button.addEventListener('click', function () {
             }
         //if the square dblclicked is not even aka odd
         } else {
+            container.removeChild(square.previousSibling);
 
             //if there is no previous sibling, alert us!
             if (square.previousSibling === null) {
